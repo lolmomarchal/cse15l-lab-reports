@@ -27,7 +27,10 @@ SQUIRREL FUNFACTS
 [Link][1]
 :
 [1]: https://time.com/3184569/11-lobster-facts-that-will-leave-you-shell-shocked/
-
+```
+Lobsters are normally blue in the wild!
+Also in certain states such as Maine they are protected by law, meaning that when theyre over a certan size they need to be released to make sure there are healthy breeding lobsters to maintain the population. 
+```
 ---
 
 DUCK FUN FACTS
