@@ -1,4 +1,4 @@
-[lab Report 1](https://https://lolmomarchal.github.io/cse15l-lab-reports/lab-report-week-0.html)
+[lab Report 1](https://lolmomarchal.github.io/cse15l-lab-reports/lab-report-week-0)
 
 *Hello, how is it going?*
 
