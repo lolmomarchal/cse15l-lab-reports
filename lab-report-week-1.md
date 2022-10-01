@@ -8,7 +8,7 @@ WEEK 1 LAB REPORT
 
 > Step 1: Installing VSCODE
 
-To first install VSCode you must go to this ![link](https://code.visualstudio.com/).
+To first install VSCode you must go to this [link](https://code.visualstudio.com/)
 
 ![image](https://user-images.githubusercontent.com/114376800/193378834-f03b0e83-109e-4403-bda8-84e487bb9f96.png)
 
@@ -39,7 +39,9 @@ and run as an admistrator. To do this you will need to run these two commands:
 
 After doing so, you should follow the instructions in this [guide](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui)
 to install the **Open SSH Client**. 
+
 ______________________________________________________________________________
+
 
 After Installing the SSH Open Client, we are going to switch over to the terminal we created in VS Code. There, we will connect to the remote host
 by using the account designated to us( in my case this is cs15lfa22ke@ieng6.ucsd.edu). After entering the ssh cs15lfa22zz@ieng6.ucsd.edu command
