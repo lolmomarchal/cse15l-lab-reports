@@ -61,6 +61,81 @@ Try to create a directory by using the command **mkdir** (hint! It stands for ma
 
 ![image](https://user-images.githubusercontent.com/114376800/193379778-1c0544a6-5c79-4d0b-a0fe-89cac98c5d25.png)
 
+**cat** is another essential command that allows you to print out what a file contains:
+
+![image](https://user-images.githubusercontent.com/114376800/193379881-3aa5c384-1a80-41c1-880c-b36e1f699677.png)
+
+
+There are other commands you can try as pictured below:
+
+![image](https://user-images.githubusercontent.com/114376800/193379843-1ecef9d1-3791-44ab-86a3-d1c00a0af74e.png)
+
+Each of these can allow you navigate through files.
+
+> Step 4: Moving Files with scp
+
+For this next step, you will need to log out of remote host. You can do so by typing out exit in the command line. 
+
+![image](https://user-images.githubusercontent.com/114376800/193379953-6747ddda-6b7f-4daf-a336-d239e0bf6e43.png)
+
+Once you have done so, you are going to make a new java file within VS Code and insert this piece of code: 
+
+```class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
+ ```
+ Then, you should run these two commands: 
+ 
+ ![image](https://user-images.githubusercontent.com/114376800/193380036-15bd7537-79b3-4423-9992-0c82557b57dc.png)
+ 
+ - The first one, **javac**, is the java compiler which compiles your code so you can run it with the **java** command. Always run javac after making anytype of change to your code. 
+
+To copy and send the WhereAmI.java file to our remote host, we will be using the **scp** command. This stands for secure copy protocol!
+
+![image](https://user-images.githubusercontent.com/114376800/193380127-d718b765-5e1c-41a1-b9f8-a7139efb318e.png)
+
+Make sure that when using scp you clarify *what* and *where* you are sending. 
+
+After doing so, log into your account again using SSH. Then use ls to make sure the file was transferred:
+
+![image](https://user-images.githubusercontent.com/114376800/193381223-7fe01ecb-5f9e-4287-9950-3ecb89013762.png)
+
+You can run this file the same way we did in local with javac & java.
+
+> Step 5: Setting an SSH Key
+
+An SSH Key is an individual identification "key" that allows you to connext to remote hosts without having to type in a password for every ssh or scp command you might do without being logged in- which in the long run saves a lot of time. 
+
+To create one you must type in this command (make sure to be logged out from the remote host): 
+
+![image](https://user-images.githubusercontent.com/114376800/193383801-35975b8e-490a-46ca-814f-dacbee90e3c0.png)
+
+As you see we have 2 separate keys the private vs public key. For this we will only be using the **public** one. Like we did before, we will use **scp** to sned the ssh key files to our remote host. After doing so, you should be able to log in or send files to the remote host *without* needing a password. 
+
+![image](https://user-images.githubusercontent.com/114376800/193383893-ff5ae121-a9ad-4bf3-91c5-b6dbd46b553a.png)
+
+
+> Step 6:
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
+
 
 
 
