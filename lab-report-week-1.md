@@ -117,12 +117,24 @@ To create one you must type in this command (make sure to be logged out from the
 
 ![image](https://user-images.githubusercontent.com/114376800/193383801-35975b8e-490a-46ca-814f-dacbee90e3c0.png)
 
-As you see we have 2 separate keys the private vs public key. For this we will only be using the **public** one. Like we did before, we will use **scp** to sned the ssh key files to our remote host. After doing so, you should be able to log in or send files to the remote host *without* needing a password. 
+As you see we have 2 separate keys the private vs public key. For this we will only be using the **public** one. Like we did before, we will use **scp** to send the ssh key files to our remote host. After doing so, you should be able to log in or send files to the remote host *without* needing a password. 
 
 ![image](https://user-images.githubusercontent.com/114376800/193383893-ff5ae121-a9ad-4bf3-91c5-b6dbd46b553a.png)
 
 
-> Step 6:
+> Step 6: Optimizing Remote Running
+
+Now that we are already saving a lot of time with the usage of our ssh key, we can be even *more* efficient. To do this we simply need to understand the power behind putting multiple commands within one single request. To do this, we simply need to put a **;** in between or "" in the case of ls as pictured below: 
+
+![image](https://user-images.githubusercontent.com/114376800/193384162-835068b8-2667-4491-bfeb-26395ea697b6.png)
+
+![image](https://user-images.githubusercontent.com/114376800/193384188-fc1b3263-3f13-4f82-8d32-5c20e5bd0a2c.png)
+
+
+This way, we can ensure that we dont have to wait for the remote host to process all of our commands, and therefore being much more efficient. 
+
+
+
 
 
 
