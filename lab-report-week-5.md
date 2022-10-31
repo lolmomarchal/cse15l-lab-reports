@@ -14,7 +14,7 @@ LAB REPORT 3
 
 ![image](https://user-images.githubusercontent.com/114376800/198950238-aec17f9f-46bf-4efc-a2c4-4c764144d6c0.png)
 
-The -N command allows you see the number of lines in each file. This is helpful as it allows you the see the amount of lines per file as you are scrolling through a large directory as ./techncial or a smaller subfolder like biomed. In a situation where you want to scroll page per page while trying to find a file with a certain amount of lines or even peruse to see what file (the ones with fewer/most lines)you wan to choose friends. 
+The -N command allows you see the number of lines in each file. This is helpful as it allows you the see the amount of lines per file as you are scrolling through a large directory as ./techncial or a smaller subfolder like biomed. In a situation where you want to scroll page per page while trying to find a file with a certain amount of lines or even peruse to see what file (the ones with fewer/most lines) you want to choose first. 
 
 
 ***less -G***
