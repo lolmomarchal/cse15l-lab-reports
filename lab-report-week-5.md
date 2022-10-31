@@ -23,4 +23,11 @@ The -N command allows you see the number of lines in each file. This is helpful 
 
 The -G command allows you to be able to go to the last line of the file. This is helpful when going through large files where you want to go directly to the last line to scroll from the end to the beginning of the file page to page.  
 
+***less -p[pattern]***
+![image](https://user-images.githubusercontent.com/114376800/198964991-f01362b0-328f-4afc-873c-fadd9aee6dd5.png)
+
+![image](https://user-images.githubusercontent.com/114376800/198964953-02390802-a4a8-4ef9-97c5-9107f54b75e4.png)
+ 
+ This finds the occurences of a pattern/string in a file and highlights them for you to scroll through. in a large file, this allows you to scroll through while having the pattern you require
+/are looking.
 
