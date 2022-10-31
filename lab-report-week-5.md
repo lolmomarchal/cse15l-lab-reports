@@ -31,3 +31,4 @@ The -G command allows you to be able to go to the last line of the file. This is
  This finds the occurences of a pattern/string in a file and highlights them for you to scroll through. In a large file, this allows you to scroll through while having the pattern you require
 /are looking.
 
+>Find 
