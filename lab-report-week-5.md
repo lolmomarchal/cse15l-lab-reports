@@ -28,6 +28,6 @@ The -G command allows you to be able to go to the last line of the file. This is
 
 ![image](https://user-images.githubusercontent.com/114376800/198964953-02390802-a4a8-4ef9-97c5-9107f54b75e4.png)
  
- This finds the occurences of a pattern/string in a file and highlights them for you to scroll through. in a large file, this allows you to scroll through while having the pattern you require
+ This finds the occurences of a pattern/string in a file and highlights them for you to scroll through. In a large file, this allows you to scroll through while having the pattern you require
 /are looking.
 
