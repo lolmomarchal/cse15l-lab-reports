@@ -44,7 +44,7 @@ Media:0
 grep: Post_Rate_Comm: Is a directory
 Post_Rate_Comm:0
 ```
-When we input the command **grep -c risk** it gives a very strange output, citing that the contents of the government directory are other directories. Instead, when trying to go through a directore we need to use the command -r with grep -c in order to go through all the contents of the directories in governemnt in a recursive manner. 
+When we input the command **grep -c risk** it gives a very strange output, citing that the contents of the government directory are other directories. Instead, when trying to go through a directore we need to use the command -r with grep -c in order to go through all the contents of the directories in government in a recursive manner. 
 
 ```
 [cs15lfa22ke@ieng6-203]:About_LSC:488$ grep -r -c risk *
@@ -100,10 +100,88 @@ In this last example, we move into the about_LSC directory of government and by 
 
 ***grep -l***
 ----
-
-![image](https://user-images.githubusercontent.com/114376800/199087332-62d36a55-abdc-4949-a0fd-a0d32b36a9a4.png)
-
 The grep -l command lists all the files that have a certain keypattern/word within them. This is more helpful when trying to find certain instances of a word throughout large directories such as technical or biomed. 
+
+**Ex 1:**
+```
+[cs15lfa22ke@ieng6-203]:911report:519$ grep -l "ok" * 
+chapter-1.txt
+chapter-10.txt
+chapter-11.txt
+chapter-12.txt
+chapter-13.1.txt
+chapter-13.2.txt
+chapter-13.3.txt
+chapter-13.4.txt
+chapter-13.5.txt
+chapter-2.txt
+chapter-3.txt
+chapter-5.txt
+chapter-6.txt
+chapter-7.txt
+chapter-8.txt
+chapter-9.txt
+preface.txt
+[cs15lfa22ke@ieng6-203]:911report:520$ grep -l "politics" *
+chapter-11.txt
+chapter-12.txt
+chapter-13.5.txt
+chapter-2.txt
+chapter-7.txt
+
+```
+In this first example, these commands search for certain keywords such as "ok" and politics within all files of the 911 directory.The general format for grep -l consists of *grep -l "[keyword]" [files to search]*. In this case the usage of * means that we are looking through all files within the 911 directory. This is helpful when trying to find specific subject matter within a directory with many files. We could follow this with a grep -c or grep -A to be able to find even mre about this occurrences. 
+
+**Ex 2:**
+
+Much like in the grep -c example, by combining grep -l with the recursive command -r, we can recursively search for files with certain keywords in large directories. In the example below, you can see the output of this. It spans several directories such as plos and biomed. Knowing that these specific files contain this word we can then use another commmand like grep -c to see how often these are mentioned and slowly iterate until we find the subject matter/reference that we need. 
+```
+[cs15lfa22ke@ieng6-203]:technical:526$ grep -r -l "hippo" *
+biomed/1471-2091-3-14.txt
+biomed/1471-2091-4-1.txt
+biomed/1471-213X-1-9.txt
+biomed/1471-2156-2-18.txt
+biomed/1471-2164-4-15.txt
+biomed/1471-2202-2-12.txt
+biomed/1471-2202-2-16.txt
+biomed/1471-2202-2-18.txt
+biomed/1471-2202-2-20.txt
+biomed/1471-2202-2-5.txt
+biomed/1471-2202-3-11.txt
+biomed/1471-2202-3-20.txt
+biomed/1471-2202-4-10.txt
+biomed/1471-2202-4-3.txt
+biomed/1471-2210-1-7.txt
+biomed/1471-2210-3-3.txt
+biomed/1471-2407-2-33.txt
+biomed/1476-511X-1-2.txt
+biomed/gb-2001-2-10-research0042.txt
+biomed/gb-2002-3-10-research0055.txt
+biomed/gb-2003-4-3-r17.txt
+plos/journal.pbio.0030024.txt
+plos/pmed.0020007.txt
+plos/pmed.0020018.txt
+
+```
+
+**Ex 3:**
+
+Let's say that we go to technical's parent directory, skill-demo1, for a second, using grep -l we can find instances of certain words such as "javac" in specific types of files like .sh files. 
+```
+[cs15lfa22ke@ieng6-203]:technical:529$ grep -r -l "javac" *.sh
+grep: *.sh: No such file or directory
+[cs15lfa22ke@ieng6-203]:technical:530$ ls                     
+911report  biomed  government  plos
+[cs15lfa22ke@ieng6-203]:technical:531$ cd ..
+[cs15lfa22ke@ieng6-203]:skill-demo1:532$ grep -r -l "javac" *.sh
+start.sh
+test.sh
+
+```
+When using this specific command, you might get a slightly unexpected output such as "grep: *.sh: No such file or directory"*. However, this only occurs when you are in a directory that does NOT have the type of file that you are looking for. This can be very helpful when trying to find where certain files are, like bash scripts in this example, and transversing throuhg a directory. 
+
+
+
 
 ***grep -A***
 ----
@@ -224,19 +302,3 @@ As seen above, this returns all instances of incident, even within other words l
 ```
 
 In this example, we go further to specify the range of our search to one single file, pmed.0020246.txt, in which we also return A0 - only the line that the instance of the keyword is in. This is useful when paired witch other grep commands like -c (which counts the instances of a certain keyword per file) when we want to simply look at certain instances without much context/for a quick glance. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
