@@ -17,6 +17,8 @@ The grep command is used for both searching, printing, and matching files with t
 The grep -c command allows you to find the count of a certain pattern/string within your files. For example in the example above, it counted a total occurences of the word "risk" within this text file. This is useful when trying to find pssages with key words wihtout having to open them and read through them. 
 
 **EX 1:**
+
+
 ```[cs15lfa22ke@ieng6-203]:biomed:491$ grep -c rRNA 1468-6708-3-1.txt
 0
 [cs15lfa22ke@ieng6-203]:biomed:492$ grep -c DNA 1468-6708-3-1.txt
@@ -24,11 +26,15 @@ The grep -c command allows you to find the count of a certain pattern/string wit
 [cs15lfa22ke@ieng6-203]:biomed:493$ grep -c A 1468-6708-3-1.txt
 29
 ```
+
+
 In this example, we are using grep -c to count the instances of different words in the text file 1468-6708-3-1.txt. As seen above, there are no instances of "rRNA: or "DNA" in this file but there are 29 instances of "A" within it. This makes it easier when trying to find how many times a keyword appears in a file. 
 
 **EX 2:**
 
 Following on this concept of counting words through grep -c, in the example below, we will be trying to find instances of the word risk within the entire /government directory. 
+
+
 ```
 [cs15lfa22ke@ieng6-203]:government:484$ grep -c risk *
 grep: About_LSC: Is a directory
@@ -44,6 +50,7 @@ Media:0
 grep: Post_Rate_Comm: Is a directory
 Post_Rate_Comm:0
 ```
+
 When we input the command **grep -c risk** it gives a very strange output, citing that the contents of the government directory are other directories. Instead, when trying to go through a directore we need to use the command -r with grep -c in order to go through all the contents of the directories in government in a recursive manner. 
 
 ```
@@ -67,10 +74,14 @@ diversity_priorities.txt:0
 reporting_system.txt:0
 
 ```
+
+
 When we do this we are able to see  how many times the keyword "risk" appears in every directory as seen above. This is useful when navigating a directory such as government, that has many files in separate directories. If we wanted, we could even do this in the parent directory, technical, to see the prevelance of this word throught the different directories. 
 
 
 **EX 3:**
+
+
 ```
 [cs15lfa22ke@ieng6-203]:About_LSC:487$ grep -c risk *
 CONFIG_STANDARDS.txt:0
@@ -92,6 +103,8 @@ diversity_priorities.txt:0
 reporting_system.txt:0
 
 ```
+
+
 In this last example, we move into the about_LSC directory of government and by using the grep -c [keyword] command here we see the different files within this directory and the instance count of the keyword in each. Combined with the last examples, this shows the usefulness of grep -c when trying to find instances of a certain keyword within a file, within directories in a directory, and in a directory with files. We can slowly decrease our search span until we find exactly what we are looking for. 
 
 
