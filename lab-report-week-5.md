@@ -19,7 +19,7 @@ The grep -c command allows you to find the count of a certain pattern/string wit
 **EX 1:**
 
 
-```[cs15lfa22ke@ieng6-203]:biomed:491$ grep -c rRNA 1468-6708-3-1.txt
+``` [cs15lfa22ke@ieng6-203]:biomed:491$ grep -c rRNA 1468-6708-3-1.txt
 0
 [cs15lfa22ke@ieng6-203]:biomed:492$ grep -c DNA 1468-6708-3-1.txt
 0
@@ -239,11 +239,14 @@ gb-2000-1-1-research002.txt-          Mus musculus strains, was ordered
 gb-2000-1-1-research002.txt:          from the Jackson Laboratories. Chimpanzee and baboon DNA
 gb-2000-1-1-research002.txt-          were obtained from Kurt Benirschke (University of 
 ```
+
 In the format grep -A(number of lines you want to print ofter keyword) (keyword) (files(s)), grep -A finds all instances of a keyword within a directory (if used with * for the file parameter) and prints out the instances as well as the specified amount of lines after them. This is helpful when trying to find certain words as well as the contexts they are used in within files and directories, especially large ones. 
 
 In this first example, grep is returning every instance of the word DNA within biomed with one line of context(represented by A1). For the sake of space (the original output is ~3000 lines) the output was shortened, nonetheless, this command is very useful when trying to get certain instances of a word. 
 
 Let's say we do another example in which we use the command **grep -A3 incident ** within the plos directory 
+
+
 ```
 [cs15lfa22ke@ieng6-203]:plos:464$ grep -A3 incident *.txt
 journal.pbio.0020101.txt:        coincidentally after World War II, was Konrad Lorenz (1966). Lorenz's thesis was greeted
@@ -300,7 +303,7 @@ pmed.0020246.txt:          within the same institution having observed the same 
 s.
 pmed.0020246.txt-          While this study focused on HIV/AIDS, it is possible that health-care professionals
 pmed.0020246.txt-          also engage in inappropriate behavior toward or breach the confidentiality of people with
-pmed.0020246.txt-          other conditions. The health-care system in Nigeria is underfunded and suffers from
+pmed.0020246.txt-          other conditions. The health-care system in Nigeria is underfunded and suffers from ```
 
 ```
 
