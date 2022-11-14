@@ -46,3 +46,18 @@ Go up a line (up key)
 
 ![image](https://user-images.githubusercontent.com/114376800/201568356-1661e999-fcc1-4860-966b-2bff2c3ec34f.png)
 
+
+Part 2
+-------
+
+>Time through scp: 78 seconds
+
+The most difficult part about using this method, is transversing through files. If you start in the directory where you are making changes you then have to scp (which I always spend a bit too much time on due to typos) and then  having to access the correct directory after ssh in order to run it. 
+
+>Time through vim: 33 seconds
+
+Using vim is much more efficient for this as you are already in the correct directory and only need to enter vim and iin less than 30 keystrokes make the changes you need. To run it, since you are already in the directory you simply need to javac and java the file.
+
+Because of the reasons above, I would prefer to make changes in vim instead of making changes within the local computer when working on a program running on a remote computer. It is much more efficient and overall easier to do. 
+
+Nevertheless, there might be certain things that *would* factor into my decision, mostly the amount of changes being made. If it is something as simple as the case above, vim is a much better option. However, it if it is somethign much more complex like making many hanges to a file, I would prefer to first finish it in my local computer- mostly so I can test is as I write and can look out of major errors such as missing a ";" that will be harder to find while only using vim. 
