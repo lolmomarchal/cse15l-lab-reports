@@ -17,8 +17,7 @@ vim DocSearchServer.java
 /File[] <Enter>
  Press 'i' on keyboard -> enters insert mode
 Go up a line (up key)
- paste line above
- System.out.println(f.toString + " is a directory");
+<ctrl+c> System.out.println(f.toString + " is a directory"); <ctr+v>
 <Esc>
 :wq
 
